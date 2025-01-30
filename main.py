@@ -3,6 +3,20 @@
 # Lab 1
 # Problem 1
 # Put your solution here, make sure I can run it by running this file. Do not submit it commented out.
+#1. Create a list called my_list with the values [1, 5, 'apple', 20.5].
+my_list = [1,5,'apple',20.5]
+#2. Using indexing, print the value 'apple' from my_list.
+print("Value at index 2:",my_list[2])
+#3. Add the value 10 to the end of my_list using the append() method. Print the updated list.
+my_list.append(10)
+print("Updated list after append:", my_list)
+#4. Remove the value 20.5 from my_list using the remove() method. Print the updated list.
+my_list.remove(20.5)
+print("Updated list after remove:", my_list")
+#5. Reverse the order of the elements in my_list using a method. Print the reversed list.
+my_list = my_list[::-1]
+print("Reversed list:", my_list)
+
 
 # Problem 2
 # Put your solution here, make sure I can run it by running this file. Do not submit it commented out.
