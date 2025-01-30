@@ -12,7 +12,7 @@ my_list.append(10)
 print("Updated list after append:", my_list)
 #4. Remove the value 20.5 from my_list using the remove() method. Print the updated list.
 my_list.remove(20.5)
-print("Updated list after remove:", my_list")
+print("Updated list after remove:, my_list")
 #5. Reverse the order of the elements in my_list using a method. Print the reversed list.
 my_list = my_list[::-1]
 print("Reversed list:", my_list)
@@ -59,7 +59,12 @@ def count_vowels(s: str) -> int:
     """
     # TODO: Implement this function
     pass
-
+def count_vowels(s):
+    vowels = 'aeiouAEIOU'
+    count = 0 
+    for char in vowels:
+        count += 1
+    return count 
 
 # Unit Tests for count_vowels
 def test_count_vowels():
@@ -89,7 +94,35 @@ def merge_lists(list1: list, list2: list) -> list:
     """
     # TODO: Implement this function
     pass
+def merg_lists(list1: list, list2: list) --> list:
+    """
+    Merge two sorted lists into a single sorted lists.list
 
+    Parameters: 
+    - list1 (list): The first sorted list
+    - list2 (list): The seconf sorted list 
+
+    Returns:
+    -l ist: A new sorted list containing all elements from list1 and list2
+    """
+def merge_lists(lists1,list2: list) -> list:
+    merged = []
+    i, j = 0, 0
+    while i < len(list) and j < len(list2):
+        if list1[i] <= list2[j]:
+        merged.append(list1[i])
+        i += 1
+    else: 
+        merged.append(list2[j])
+        j += 1
+    while i < len(list1):
+        merged.append(list1[i])
+        i += 1
+    while j < len(list2[j])
+        j += 1
+    return merged
+
+            
 
 # Unit Tests for merge_lists
 def test_merge_lists():
@@ -120,7 +153,11 @@ def word_lengths(words: list) -> list:
     """
     # TODO: Implement this function
     pass
-
+def word_lengths(words):
+    lengths = []
+    for words in words:
+        lengths.append(len(word)
+    return length 
 
 # Unit Tests for word_lengths
 def test_word_lengths():
@@ -147,7 +184,11 @@ def reverse_string(s: str) -> str:
     """
     # TODO: Implement this function
     pass
-
+def reverse_string(s):
+    reversed_s = ""
+    for char in s:
+        reversed_s = char + reversed_s
+    return reversed_s
 
 # Unit Tests for reverse_string
 def test_reverse_string():
@@ -176,7 +217,14 @@ def intersection(list1: list, list2: list) -> list:
     """
     # TODO: Implement this function
     pass
-
+def  intersection(list1, list2):
+    result = []
+    seen = {}
+    for item in list1:
+        seen[item] = True 
+    for item in list2:
+        if item in seen and item not in result:
+        result.append(item)
 
 # Unit Tests for intersection
 def test_intersection():
