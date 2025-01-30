@@ -20,7 +20,17 @@ print("Reversed list:", my_list)
 
 # Problem 2
 # Put your solution here, make sure I can run it by running this file. Do not submit it commented out.
-
+#1. Create a dictionary called person with keys 'name', 'age', 'job' and values 'John', 30, 'teacher'.
+person = {'name':"John","age":30,"job"teacher"}
+#2. Print the value corresponding to the 'job' key.
+print{Job:",person['job']}
+#3. Add a new key-value pair: 'city': 'Paris' to the person dictionary. Print the updated dictionary.
+person["city']='Paris'
+#4. Remove the 'age' key-value pair from person. Print the updated dictionary.
+del person['age']
+#5. Iterate through the person dictionary and print out each key-value pair on a separate line.
+for key, value in person.items():
+    priny(f"{key}: {value}")
 # -----------------------------------------------------------------------------
 
 
