@@ -21,16 +21,16 @@ print("Reversed list:", my_list)
 # Problem 2
 # Put your solution here, make sure I can run it by running this file. Do not submit it commented out.
 #1. Create a dictionary called person with keys 'name', 'age', 'job' and values 'John', 30, 'teacher'.
-person = {'name':"John","age":30,"job"teacher"}
+person ={"name":"John","age":30,"job":"teacher"}
 #2. Print the value corresponding to the 'job' key.
-print{Job:",person['job']}
+print("Job: " +person["job"])
 #3. Add a new key-value pair: 'city': 'Paris' to the person dictionary. Print the updated dictionary.
-person["city']='Paris'
+person.update({"city":"paris"})
 #4. Remove the 'age' key-value pair from person. Print the updated dictionary.
 del person['age']
 #5. Iterate through the person dictionary and print out each key-value pair on a separate line.
 for key, value in person.items():
-    priny(f"{key}: {value}")
+    print(f"{key}: {value}")
 # -----------------------------------------------------------------------------
 
 
@@ -94,7 +94,7 @@ def merge_lists(list1: list, list2: list) -> list:
     """
     # TODO: Implement this function
     pass
-def merg_lists(list1: list, list2: list) --> list:
+def merg_lists(list1: list, list2: list) -> list:
     """
     Merge two sorted lists into a single sorted lists.list
 
@@ -105,22 +105,20 @@ def merg_lists(list1: list, list2: list) --> list:
     Returns:
     -l ist: A new sorted list containing all elements from list1 and list2
     """
-def merge_lists(lists1,list2: list) -> list:
-    merged = []
-    i, j = 0, 0
-    while i < len(list) and j < len(list2):
-        if list1[i] <= list2[j]:
-        merged.append(list1[i])
-        i += 1
-    else: 
-        merged.append(list2[j])
-        j += 1
-    while i < len(list1):
-        merged.append(list1[i])
-        i += 1
-    while j < len(list2[j])
-        j += 1
-    return merged
+def merge_lists(list1,list2: list) -> list:
+    mergedlist = []
+    while(len(list1)>0 and len(list2)>0):
+        val1 = list1[0]
+        val2 = list2[0]
+        if(val1<=val2):
+            mergedlist.append(list1.pop(0))
+        else:
+            mergedlist.append(list2.pop(0))
+    for num in list1:
+        mergedlist.append(num)
+    for num in list2:
+        mergedlist.append(num)
+    return mergedlist
 
             
 
@@ -155,9 +153,9 @@ def word_lengths(words: list) -> list:
     pass
 def word_lengths(words):
     lengths = []
-    for words in words:
-        lengths.append(len(word)
-    return length 
+    for word in words:
+        lengths.append(len(word))
+    return lengths 
 
 # Unit Tests for word_lengths
 def test_word_lengths():
@@ -224,7 +222,7 @@ def  intersection(list1, list2):
         seen[item] = True 
     for item in list2:
         if item in seen and item not in result:
-        result.append(item)
+            result.append(item)
 
 # Unit Tests for intersection
 def test_intersection():
