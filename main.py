@@ -57,13 +57,11 @@ def count_vowels(s: str) -> int:
     Returns:
     - int: The number of vowels in the string
     """
-    # TODO: Implement this function
-    pass
-def count_vowels(s):
     vowels = 'aeiouAEIOU'
     count = 0 
-    for char in vowels:
-        count += 1
+    for char in s:
+        if char in vowels:
+            count += 1
     return count 
 
 # Unit Tests for count_vowels
@@ -81,36 +79,12 @@ def test_count_vowels():
 
 
 # Function 2: merge_lists
-def merge_lists(list1: list, list2: list) -> list:
-    """
-    Merge two sorted lists into a single sorted list.
-
-    Parameters:
-    - list1 (list): The first sorted list
-    - list2 (list): The second sorted list
-
-    Returns:
-    - list: A new sorted list containing all elements from list1 and list2
-    """
-    # TODO: Implement this function
-    pass
-def merg_lists(list1: list, list2: list) -> list:
-    """
-    Merge two sorted lists into a single sorted lists.list
-
-    Parameters: 
-    - list1 (list): The first sorted list
-    - list2 (list): The seconf sorted list 
-
-    Returns:
-    -l ist: A new sorted list containing all elements from list1 and list2
-    """
 def merge_lists(list1,list2: list) -> list:
     mergedlist = []
-    while(len(list1)>0 and len(list2)>0):
+    while len(list1)>0 and len(list2)>0:
         val1 = list1[0]
         val2 = list2[0]
-        if(val1<=val2):
+        if val1<=val2:
             mergedlist.append(list1.pop(0))
         else:
             mergedlist.append(list2.pop(0))
@@ -150,8 +124,6 @@ def word_lengths(words: list) -> list:
     - list: A list containing the lengths of the words
     """
     # TODO: Implement this function
-    pass
-def word_lengths(words):
     lengths = []
     for word in words:
         lengths.append(len(word))
@@ -181,8 +153,6 @@ def reverse_string(s: str) -> str:
     - str: The reversed string
     """
     # TODO: Implement this function
-    pass
-def reverse_string(s):
     reversed_s = ""
     for char in s:
         reversed_s = char + reversed_s
@@ -200,22 +170,7 @@ def test_reverse_string():
     test(reverse_string("12345") == "54321")
     test(reverse_string("  spaces  ") == "  secaps  ")
 
-
-# Function 5: intersection
-def intersection(list1: list, list2: list) -> list:
-    """
-    Find the intersection of two lists.
-
-    Parameters:
-    - list1 (list): The first list
-    - list2 (list): The second list
-
-    Returns:
-    - list: The intersection of the two lists
-    """
-    # TODO: Implement this function
-    pass
-def  intersection(list1, list2):
+def intersection(list1, list2):
     result = []
     seen = {}
     for item in list1:
@@ -223,6 +178,7 @@ def  intersection(list1, list2):
     for item in list2:
         if item in seen and item not in result:
             result.append(item)
+    return result
 
 # Unit Tests for intersection
 def test_intersection():
